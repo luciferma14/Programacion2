@@ -5,6 +5,12 @@ public class basicoScanner {
         
         Scanner sc = new Scanner(System.in);
 
+        int a = 8;
+        int b = 5;
+        double res = a / (double) b;
+
+        System.out.printf("La div entre %d y %d es %.1f \n", a, b, res);
+
         int num1;
         int num2;
         String nom;
@@ -17,10 +23,12 @@ public class basicoScanner {
 
         System.out.println("La suma de los dos: " + (num1 + num2));
 
-        System.out.println("Dime tu nombre: ");
+        sc.nextLine();
+
+        System.out.print("Dime tu nombre: ");
         nom = sc.nextLine();
 
-        System.out.println("Bienvenido " + nom);
-
+        System.out.println("Bienvenid@ " + nom + "a la clase");
+        System.out.printf("Bienvenid@ %s a la clase \n", nom);
     }
 }
