@@ -9,7 +9,6 @@ public class ampliado2 {
         double a;
         int b;
         int c;
-
         System.out.print("Primer número: ");
         a = sc.nextInt();
 
