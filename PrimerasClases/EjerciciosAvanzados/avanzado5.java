@@ -9,11 +9,8 @@ public class avanzado5 {
         //huevos
         int caben;
         int quiero;
-        int tiempo = 10;
-
-        // si caben 8, y quiero 8, tarda 10
-        // si caben 8, y quiero 10, tarda 20
-        // quiero si num huevos cocer > caben --> +10 se pasa limite caben
+        int ollas;
+        int tiempo;
 
         System.out.print("Huevos que caben: ");
         caben = sc.nextInt();
@@ -21,8 +18,13 @@ public class avanzado5 {
         System.out.print("Huevos que quiero cocer: ");
         quiero = sc.nextInt();
 
-        if(quiero <= caben){
-            System.out.println("Tardarán en cocerse " + tiempo + " mins");
+        ollas = quiero / caben;
+
+        if (quiero % caben > 0){
+            tiempo = (ollas + 1) * 10;
+        }else{
+            tiempo = 10;
         }
+        System.out.println("Tardarán en cocerse " + tiempo + " minutos");
     }
 }
