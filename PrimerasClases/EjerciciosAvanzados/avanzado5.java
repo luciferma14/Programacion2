@@ -22,13 +22,7 @@ public class avanzado5 {
         quiero = sc.nextInt();
 
         if(quiero <= caben){
-            System.out.println("Tardarán en cocerse " + tiempo + "mins");
-
-        }else if (quiero > caben && quiero > caben + caben){
-            for (int i = 0; quiero > caben; i++){
-                int tiem = tiempo +10;
-                System.out.println(tiem);
-            }
+            System.out.println("Tardarán en cocerse " + tiempo + " mins");
         }
     }
 }
