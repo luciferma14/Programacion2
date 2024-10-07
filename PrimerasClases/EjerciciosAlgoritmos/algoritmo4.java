@@ -9,8 +9,8 @@ public class algoritmo4 {
         int num;
         int par = 0;
         int impar = 0;
-        int cantPar = 0;
-        int cantIm = 0;
+        double cantPar = 0;
+        double cantIm = 0;
 
         System.out.print("Dime una cantidad de números: ");
         cant = sc.nextInt();
@@ -21,14 +21,14 @@ public class algoritmo4 {
 
             if (num % 2 == 0){
                 par++;
-                cantPar = par / cant; // crear var para guardar par++
+                cantPar = ((double)par / cant) * 100; 
             }else {
                 impar++;
-                cantIm = impar / cant;
+                cantIm = ((double)impar / cant) * 100;
 
             }
         }
 
-        System.out.printf("Porcentaje de pares: %d \nPorcentaje de impares: %d\n", cantPar, cantIm);
+        System.out.printf("Porcentaje de pares: %.2f \nPorcentaje de impares: %.2f\n", cantPar, cantIm);
     }
 }
