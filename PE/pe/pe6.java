@@ -13,7 +13,7 @@ public class pe6 {
         int horasTot2;
         int horasTrans;
         String dia1s = "";
-        String dia2s = "";
+        String dia2s = ""; 
 
         do{
             System.out.print("Día 1: ");
