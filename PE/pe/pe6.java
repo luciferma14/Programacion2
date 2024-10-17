@@ -22,6 +22,7 @@ public class pe6 {
             if (dia1 < 1 || dia1 > 7){
                 System.out.println("El día no es válido");
             }
+
         }while(dia1 < 1 || dia1 > 7);
 
         do{
@@ -45,6 +46,7 @@ public class pe6 {
             if (dia2 < 1 || dia2 > 7){
                 System.out.println("El día no es válido");
             }
+
         }while(dia2 < 1 || dia2 > 7);
 
         do{
@@ -68,6 +70,7 @@ public class pe6 {
             default: dia1s = "Dia inválido"; break;
             
         }
+        
         switch (dia2) {
             case 1: dia2s = "lunes"; break;
             case 2: dia2s = "martes"; break;
