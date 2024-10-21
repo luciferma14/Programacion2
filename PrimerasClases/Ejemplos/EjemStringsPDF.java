@@ -6,6 +6,7 @@ public class EjemStringsPDF {
         
         System.out.printf("%s, %d \n", str, str.length()); 
         System.out.println(str.charAt(5)); // Es el espacio
+        
 
     }
 }
