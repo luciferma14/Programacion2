@@ -25,7 +25,6 @@ public class algoritmo4 {
             }else {
                 impar++;
                 cantIm = ((double)impar / cant) * 100;
-
             }
         }
 

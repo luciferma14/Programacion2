@@ -5,7 +5,7 @@ public class avanzado5 {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
-        
+
         //huevos
         int caben;
         int quiero;
