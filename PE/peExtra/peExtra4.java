@@ -7,7 +7,7 @@ public class peExtra4 {
 
         String frase;
         String fraseMin;
-        String repFrase = "";
+        String repFrase;
 
         System.out.print("Dime una frase: ");
         frase = sc.nextLine();
