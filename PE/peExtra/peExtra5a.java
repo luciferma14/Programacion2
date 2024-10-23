@@ -7,7 +7,7 @@ public class peExtra5a {
 
         int tam;
 
-        System.out.print("Tamaño del triangulo: ");
+        System.out.print("Tamaño del triángulo: ");
         tam = sc.nextInt();
 
         for(int i = 1; i <= tam; i++){
