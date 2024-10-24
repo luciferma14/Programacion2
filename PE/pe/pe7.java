@@ -5,12 +5,14 @@ public class pe7 {
         
         Scanner sc = new Scanner(System.in);
 
-        int jugOrd = (int) (Math.random()*3+1);
+        int jugOrd;
         int jugUsu;
         int puntOrd = 0;
         int puntUsu = 0;
 
         do{
+            jugOrd = (int) (Math.random() * 3 + 1);
+
             System.out.println("Seleciona una opción");
             System.out.println("1 - Piedra");
             System.out.println("2 - Papel");
