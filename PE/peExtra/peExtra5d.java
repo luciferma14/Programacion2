@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class peExtra5d {
@@ -19,7 +18,6 @@ public class peExtra5d {
         numPosiciones = numNiveles * 2 -1; // 4 * 2 = 8 - 1 = 7 --> 1-2-3-4-3-2-1 = 7 números
         posInicial = numNiveles;
         posFinal = numNiveles;
-        
         
         for (int i = 0; i < numNiveles; i++) { // números de líneas --> 4 líneas
             cont = 1;               
