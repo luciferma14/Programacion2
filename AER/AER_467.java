@@ -1,6 +1,4 @@
-import java.util.Arrays;
 import java.util.Scanner;
-
 public class AER_467 {
     public static void main(String[] args) {
         
@@ -8,7 +6,8 @@ public class AER_467 {
 
         int casos;
         String palab;
-        //String[] es = palab.split("es");
+        String esMin0;
+        String esMin1;
 
         casos = sc.nextInt();
         sc.nextLine();
@@ -17,17 +16,16 @@ public class AER_467 {
             
             palab = sc.nextLine();
 
-            String[] es = palab.split("es");
+            String[] es = palab.split(" es ");
+
+            esMin0 = es[0].toLowerCase();
+            esMin1 = es[1].toLowerCase();
             
-            if (Arrays.equals(es[0], es[2])){
+            if (esMin0.equals(esMin1)){
                 System.out.println("TAUTOLOGIA");
             }else{
                 System.out.println("NO TAUTOLOGIA");
-            }
-            
+            }   
         }
-
-
-
     }
 }
