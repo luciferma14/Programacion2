@@ -24,8 +24,7 @@ public class AER_151 {
 
             sigue = false;
             valor = 0;
-            casos = sc.nextInt();
-
+            
             valor++;
                 
             if(matriz[valor][valor] == 1){
@@ -37,6 +36,8 @@ public class AER_151 {
             }else{
                 System.out.println("NO");
             }
+
+            casos = sc.nextInt();
 
         }while(casos != 0);
     }
