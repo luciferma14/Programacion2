@@ -3,27 +3,16 @@ import java.util.Scanner;
 
 public class AER_216 {
 
-    public static int segundos(int gotas){
+    public static int[] calcurar(int gotas){
 
-        int seg = 00;
+        int [] tiempo = new int[3];
 
-        if (gotas >= 59){
-            return seg;
-        }else {
-            return gotas;
-        }
-    }
-
-    public static int minutos(int gotas){
-
-        int min = 0;
-
-        if (gotas >= 60){
-            min++;
-            return min;
-        }else {
-            return min;
-        }
+        tiempo[0] = gotas / 3600;
+        int resto = gotas % 3600;
+        tiempo[1] = resto / 60;
+        tiempo[2] = resto % 60;
+        
+        return tiempo;
     }
     public static void main(String[] args) {
         
@@ -37,7 +26,9 @@ public class AER_216 {
         for (int i = 0; i < casos; i++){
             gotas = sc.nextInt();
 
-            System.out.printf("00 : %02d : %02d\n", minutos(gotas),segundos(gotas)); 
+            int[] tiempo = calcurar(gotas);
+
+            System.out.printf("%02d:%02d:%02d%n", tiempo[0], tiempo[1], tiempo[2]); 
 
         }
 
