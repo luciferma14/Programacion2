@@ -1,65 +1,48 @@
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class AER_416 {
-    public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
 
-        int casos;
-        boolean sigue = false;
-        casos = sc.nextInt();
+    public static boolean cumple(int casos){
 
-        do { 
-            
-            String[] fechas = new String[casos];
-            String cumple = " ";
-            String[] barra = cumple.split("/"); 
-            List<String> lista = new ArrayList<String>();
+        String[] fechas = new String[casos];
+        String fecha;
+        String diaMes;
+        boolean repetido = false;
 
-            for (int i = 0; i < casos; i++) {
-                fechas[i] = sc.next();
-                
-                cumple = fechas[i];     
-                barra = cumple.split("/");
+        for (int i = 0; i < casos; i++) {
 
-                // System.out.println(casos);
-                // System.out.println(Arrays.toString(fechas)); //todos los cumples
-                // System.out.println(cumple); //fecha del cumple
-                //System.out.print(barra[0] + ", "); //dia
-                // System.out.println(barra[1] + ", "); //mes
-                // System.out.println(barra[2] + ", "); //año
+            fecha = sc.next();
+            diaMes = fecha.substring(0, 5); 
 
-
-                lista.add(barra[0]);
-                System.out.println(barra[0]);
-
-                if (barra[0].equals(lista)){
-                    sigue = true;                
-                }else{
-                    sigue = false;
+            for (int j = 0; j < i; j++) {
+                if (diaMes.equals(fechas[j].substring(0, 5))) {
+                    repetido = true;  
                 }
             }
+            fechas[i] = fecha;  // Almacena la fecha completa
+        }
+        return repetido;
+    }
+    public static void main(String[] args) {
 
-            System.out.println(lista);
+        int casos;
+        boolean repetido;
 
-            if (sigue){
+        casos = sc.nextInt();
+
+        do{
+            repetido = cumple(casos);
+
+            if (repetido) {
                 System.out.println("SI");
-            }else{
+            } else {
                 System.out.println("NO");
             }
-            
-            // if ((barra[0].equals(barra[0])) && (barra[1].equals(barra[1]))){
-            //     System.out.println("SI");
-            // }else{
-            //     System.out.println("NO");
-            // }
-        
+
             casos = sc.nextInt();
 
-        } while (casos != 0);
-        
+        }while (casos != 0);
     }
 }
