@@ -10,16 +10,29 @@ public class AER_472 {
     public static boolean esApta(int subidaMax, int[] cotas){
         
         boolean apto = true;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
 
-        for(int i = cotas.length; i < 0; i--){
-            for (int j = cotas.length; j < 1; j--) {
+        for(int i = 0; i < cotas.length; i++){
 
-                if (cotas[i] - cotas[j] < subidaMax){
-                    apto = false;
-                }   
+            for (int j = 0; j < cotas.length; j++) {
+                if (cotas[j] > max){
+                    max = cotas[j];
+                }
             }
+    
+            for (int x = 0; x < cotas.length; x++) {
+                if (cotas[x] < min){
+                    min = cotas[x];
+                }
+            }
+
+            if((max - min) > subidaMax){
+                apto = false;
+            }
+    
         }
-        
+
         return apto;
     }
     public static void main(String[] args) {
