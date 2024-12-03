@@ -3,17 +3,26 @@ import java.util.Scanner;
 
 public class AER_472 {
 
+    static Scanner sc = new Scanner(System.in);
+
     // mientras el siguente valor sea menor que 300, sigue
 
     public static boolean esApta(int subidaMax, int[] cotas){
         
         boolean apto = true;
+
+        for(int i = cotas.length; i < 0; i--){
+            for (int j = cotas.length; j < 1; j--) {
+
+                if (cotas[i] - cotas[j] < subidaMax){
+                    apto = false;
+                }   
+            }
+        }
         
         return apto;
     }
     public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
 
         while (sc.hasNext()){
             int subidaMax = sc.nextInt();

@@ -1,5 +1,4 @@
 package libreriaNum;
-
 public class Numeros {
 
     public static long potencia(int base, int expo){
