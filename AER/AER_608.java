@@ -16,19 +16,20 @@ public class AER_608 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int numTem = sc.nextInt();
+        int ntemp = sc.nextInt();
 
-        while (numTem != 0){
+        while (ntemp != 0){
 
-            int[] temp = new int [numTem];
+            int[] temp = new int [ntemp];
 
-            for (int i = 0; i < numTem; i++) {
+            for (int i = 0; i < ntemp; i++) {
                 temp[i] = sc.nextInt();
             }
           
             System.out.println(calculaAlarmas(temp));
 
-            numTem = sc.nextInt();
+            //Siguiente caso
+            ntemp = sc.nextInt();
 
         }
         
