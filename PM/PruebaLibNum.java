@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import libreriaNum.*;
+import libreriaNum.Numeros;
 
 public class PruebaLibNum{
 
@@ -31,6 +31,9 @@ public class PruebaLibNum{
 
         System.out.println(Numeros.uneNumeros(123, 45));
 
+        System.out.println(Numeros.ordenaDigitos(4526));
+
+
 
         //----------- EJERCICIOS DEL PDF -----------
 
@@ -60,6 +63,8 @@ public class PruebaLibNum{
 
         // Ejercicio 3 (210 de acepta el reto)
 
+        System.out.println("210 Acepta el reto");
+
         int casos;
         String palabra;
         int suma;
@@ -77,6 +82,45 @@ public class PruebaLibNum{
             }
             System.out.println(Numeros.anteriorPrimo(suma));
         }
-    }
 
+        // Ejercicio 100 acepta el reto
+
+        System.out.println("100 Acepta el reto");
+
+        int casos100;
+        int numero;
+        int numDesc;
+        int numAsc;
+        int itera;
+        int cont = 0;
+        int num100 = 0;
+
+        casos100 = sc.nextInt();
+
+        do {
+            num100  = sc.nextInt();
+            numero = num100;
+
+            itera = 0;
+
+            while (num100 != 6174) {
+                itera++;
+
+                if (itera >= 8){
+                    itera = 8;
+                    num100 = 6174;
+                }
+
+                numero = num100;
+
+                numDesc = Numeros.ordenaDigitos(numero);
+                numAsc = Numeros.volteaNum(numDesc);
+                
+                num100 = numDesc-numAsc;
+            }
+            System.out.println(itera);
+            cont++;
+
+        } while (cont < casos100);
+    }
 }

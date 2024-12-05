@@ -1,4 +1,5 @@
 package libreriaNum;
+
 public class Numeros {
 
     public static long potencia(int base, int expo){
@@ -117,4 +118,31 @@ public class Numeros {
         return nuevoNum;
     }
 
+    public static int ordenaDigitos(int numero){
+
+        int[] digitos = new int[4];
+        int numDesc;
+
+        // Guarda los cada dígito en el array
+        for (int j = 0; j < 4; j++) {
+            digitos[j] = numero % 10;    
+            numero /= 10;
+        }
+
+        // Compara cada dígito para ordenarlos
+        for (int i = 0; i < 4; i++) {
+            for (int j = i + 1; j < 4; j++) {
+                if (digitos[i] < digitos[j]) {
+                    int temp = digitos[i];       
+                    digitos[i] = digitos[j];
+                    digitos[j] = temp;
+                }
+            }
+        }
+
+        // Crea el número de 4 dígitos
+        numDesc = digitos[0] * 1000 + digitos[1] * 100 + digitos[2] * 10 + digitos[3];  
+        
+        return numDesc;
+    }
 }
