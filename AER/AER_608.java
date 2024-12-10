@@ -6,9 +6,18 @@ public class AER_608 {
     public static int calculaAlarmas(int[] v){
 
         int cuenta = 0;
+        boolean alarma = false;
 
-        //Realizar las coprobaciones de las temperaturas
-
+        for (int i = 0; i < v.length; i++) {
+            if (v[i] <= 4) {
+                if (! alarma) {
+                    cuenta++;
+                    alarma = true;
+                }
+            } else if (v[i] > 6) {
+                alarma = false;
+            }
+        }
         return cuenta;
     }
 

@@ -10,7 +10,7 @@ public class AER_252 {
         if(s.length() == 0 || s.length() == 1){
             polin = true;
         }else{
-            if(s.charAt(0) == s.length() - 1){
+            if(s.charAt(0) == s.charAt(s.length() - 1)){
                 //System.out.println(palindroma(s.substring(1, s.length() - 1)));
                 polin = palindroma(s.substring(1, s.length() - 1));
 
@@ -32,7 +32,7 @@ public class AER_252 {
         s = s.toLowerCase();
         s = s.replaceAll(" ", "");
 
-        System.out.println(s);
+        //System.out.println(s);
 
         if(palindroma(s)){
             System.out.println("SI");
