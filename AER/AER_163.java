@@ -10,14 +10,16 @@ public class AER_163{
         int num;
 
         for(int i = 0; i < cifras.length; i++){
-            //num = Integer.parseInt(hexa);
+            num = Integer.parseInt(hexa);
 
             if(hexa.equals(cifras[i])){
                 solucion = cifras[i + 1];
-            }//else if(num > 9){
-            //     num++;
-            //     solucion = Integer.toString(num);
-            // }
+            }else if(num > 9){
+                num++;
+                solucion = Integer.toString(num);
+            }
+
+            // Falta terminarlo (pero da errores)
         }
 
         return solucion;
