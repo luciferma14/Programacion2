@@ -1,37 +1,62 @@
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class AER_140 {
 
-    public static int sumaDig(String num){
+    public static String sumaDig(int num){
 
+        String str = String.valueOf(num);
+        String solu = "";
         int suma = 0;
-        
-        return suma;
+
+        for(int i = 0; i < str.length() -1; i++){
+            int x = Integer.parseInt(str.substring(i, i+1));
+            suma += x;
+            solu = solu + x + " + ";
+        }
+
+        suma += Integer.parseInt(str.substring(str.length()-1));
+        solu = solu + str.substring(str.length()-1) + " = " + suma;
+
+        return solu;
+
+        // if(num < 10){
+        //     return num + "";
+        // }else{
+        //     int digito = num / 10;
+        //     int resto = num % 10;
+
+        //     return sumaDig(resto) + " + " + digito;
+        // }
     }
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        String num;
-        int dig;
+        int num;
 
-        num = sc.nextLine();
+        num = sc.nextInt();
 
-        while(!num.contains("-")){
+        while(num >= 0){
 
-            int[] lista = new int[num.length()];
+            String solu = sumaDig(num);
 
-            for(int i = 0; i < lista.length; i++){
+            System.out.println(solu);
+            
+            num = sc.nextInt();
 
-                lista[i] = num.charAt(0);
-            }
+            // Lo que había intentado yop :(
+            // String[] lista = new String[num.length()];
 
-            System.out.println(Arrays.toString(lista));
+            // for(int i = 0; i < num.length(); i++){
 
-            num = sc.nextLine();
+            //     char nume = num.charAt(i);
+
+            //     String numeros = Character.toString(nume);
+
+            //     lista[i] = numeros;
+            //     System.out.printf("%s + ", lista[i]);
+                
+            // }
         }
-        
     }
 }
