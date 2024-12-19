@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class ampliado4 {
+public class Ampliado4 {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);

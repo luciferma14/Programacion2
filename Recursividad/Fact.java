@@ -1,4 +1,4 @@
-public class fact {
+public class Fact {
 
     public static int factorial(int num){
 

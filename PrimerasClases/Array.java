@@ -1,7 +1,6 @@
-
 import java.util.Arrays;
 
-public class arrays {
+public class Array {
     public static void main(String[] args) {
         
         // int[] vec = new int[8];

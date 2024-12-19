@@ -1,4 +1,4 @@
-public class peExtra5b {
+public class PeExtra5b {
     public static void main(String[] args) {
 
         int tam = (int) (Math.random() * 20) + 1;

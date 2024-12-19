@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class peExtra3 {
+public class PeExtra3 {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);

@@ -1,4 +1,4 @@
-public class basico32 {
+public class Basico32 {
     public static void main(String[] args) {
         
         double x = 88;

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ejemPE2 {
+public class EjemPE2 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);

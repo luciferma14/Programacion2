@@ -1,4 +1,4 @@
-public class peExtra1 {
+public class PeExtra1 {
     public static void main(String[] args) {
     
         int dado1 = (int) (Math.random() * 6) +1;

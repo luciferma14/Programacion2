@@ -1,4 +1,4 @@
-public class basico33 {
+public class Basico33 {
     public static void main(String[] args) {
         
         char c1 = 'E';

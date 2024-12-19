@@ -1,4 +1,4 @@
-public class dos {
+public class Dos {
     public static void main(String[] args) {
 
         int a = 109;

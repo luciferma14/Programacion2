@@ -1,4 +1,4 @@
-public class basico22 {
+public class Basico22 {
     public static void main(String[] args) {
         
         int edad = 19;

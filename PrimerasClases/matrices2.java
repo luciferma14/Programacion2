@@ -1,4 +1,4 @@
-public class matrices2 {
+public class Matrices2 {
     public static void main(String[] args) {
 
         int filas = 3;
