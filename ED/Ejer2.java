@@ -6,11 +6,12 @@ public class Ejer2 {
         
         ArrayList<Integer> lista = new ArrayList<Integer>(); 
 
-        int n = (int)(Math.random() * 11) + 10;
+        int num = (int)(Math.random() * 11) + 10;
         int suma = 0;
+        int max;
+        int min;
         
-
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < num; i++) {
             lista.add((int)(Math.random() * 100) + 1);
         }    
 
@@ -19,8 +20,8 @@ public class Ejer2 {
         }
         System.out.println();
 
-        int min = lista.getFirst();
-        int max =  lista.getFirst();
+        min = lista.getFirst();
+        max =  lista.getFirst();
 
         for (Integer x : lista) { // suma, max y min
             suma += x;   
@@ -31,10 +32,10 @@ public class Ejer2 {
                 max = x;
             }
         }
-        System.out.println("La suma es "+suma);
-        System.out.println("La media es "+suma/lista.size());
-        System.out.println("El máximo es "+max);
-        System.out.println("El mínimo es "+min);
+        System.out.println("La suma es " + suma);
+        System.out.println("La media es " + suma / lista.size());
+        System.out.println("El máximo es " + max);
+        System.out.println("El mínimo es " + min);
     }
 }
 // hay que hacer estas navidades el ejercicio 4 
