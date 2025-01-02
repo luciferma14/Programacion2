@@ -38,5 +38,4 @@ public class Ejer2 {
         System.out.println("El mínimo es " + min);
     }
 }
-// hay que hacer estas navidades el ejercicio 4 
-// (Math.random() * lista.size()) + 1 
+// (Math.random() * lista.size()) + 1
