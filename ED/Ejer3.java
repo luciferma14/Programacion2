@@ -38,20 +38,15 @@ public class Ejer3 {
         }
         
 
-        // if(parente % 2 == 0){
-        //     System.out.println("SI");
-        // }else{
-        //     System.out.println("NO");
-        // }
+        if(parente % 2 == 0){
+            System.out.println("SI");
+        }else{
+            System.out.println("NO");
+        }
 
         System.out.println(parente);
         System.out.println(llave);
         System.out.println(corche);
-
-
-
-
-
 
     }
 }
