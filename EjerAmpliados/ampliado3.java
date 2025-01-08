@@ -1,4 +1,4 @@
-public class Ampliado3 {
+public class ampliado3 {
     public static void main(String[] args) {
 
         double PI = 3.141592;

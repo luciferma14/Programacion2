@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class Pm1 {
+public class pm1 {
 
     final static double PI = 3.141592;
 

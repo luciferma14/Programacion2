@@ -1,4 +1,4 @@
-public class Basico31 {
+public class basico31 {
     public static void main(String[] args) {
         
         int a = 8;

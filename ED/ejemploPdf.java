@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class EjemploPdf {
+public class ejemploPdf {
     public static void main(String[] args) {
         
         ArrayList<String> diasSemana = new ArrayList<String>();

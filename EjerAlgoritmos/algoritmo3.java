@@ -1,4 +1,4 @@
-public class Algoritmo3 {
+public class algoritmo3 {
     public static void main(String[] args) {
         
         // 0 + 1 = 1 + 2 = 3 + 3 = 6 + 4 = ... +100

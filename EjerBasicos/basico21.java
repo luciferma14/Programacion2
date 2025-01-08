@@ -1,4 +1,4 @@
-public class Basico21 {
+public class basico21 {
     public static void main(String[] args) {
         
         int p = 10; 

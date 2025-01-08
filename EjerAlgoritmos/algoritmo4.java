@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Algoritmo4 {
+public class algoritmo4 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);

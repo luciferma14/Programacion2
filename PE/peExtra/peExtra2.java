@@ -1,4 +1,4 @@
-public class PeExtra2 {
+public class peExtra2 {
     public static void main(String[] args) {
 
         int dado1;

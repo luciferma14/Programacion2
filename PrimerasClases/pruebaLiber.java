@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import liber.Vector;
 
-public class PruebaLiber{
+public class pruebaLiber{
     public static void main(String[] args) {
         
         int[] v = Vector.rellenaVectorInt(8);
