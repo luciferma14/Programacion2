@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Ejer1 {
@@ -13,14 +12,14 @@ public class Ejer1 {
         sueldo = sc.nextInt();
         porte = sc.nextInt();
 
-        do { 
+        while (sueldo != 0 && porte != 0){
+
             dobleSueldo = sueldo * 2;
 
             System.out.println(dobleSueldo * porte);
             
             sueldo = sc.nextInt();
             porte = sc.nextInt();
-            
-        } while (sueldo != 0 && porte != 0);           
+        }           
     }
 }
