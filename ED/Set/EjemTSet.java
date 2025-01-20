@@ -1,6 +1,6 @@
 import java.util.HashSet;
 
-public class EjemSet {
+public class EjemTSet {
     public static void main(String[] args) {
         
         HashSet<Integer> hash = new HashSet<>();
