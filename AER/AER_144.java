@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AER_144 {
+
+    // falta terminarlo :(
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
