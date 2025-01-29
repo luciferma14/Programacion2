@@ -26,7 +26,7 @@ public class Mesa {
         }
     }
 
-    public boolean reservaMese(){
+    public boolean reservaMesa(){
 
         if(this.estado.equals("Libre")){
             this.estado = "Ocupada";

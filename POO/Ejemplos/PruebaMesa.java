@@ -20,10 +20,10 @@ public class PruebaMesa {
 
         System.out.println("Estado: " + bar[3].estado);
 
-        bar[3].reservaMese();
+        bar[3].reservaMesa();
 
         System.out.println("Estado: " + bar[3].estado);
 
-        bar[3].reservaMese();
+        bar[3].reservaMesa();
     }
 }
