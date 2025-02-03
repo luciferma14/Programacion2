@@ -11,6 +11,5 @@ public class PruebaPlanetas {
         }
 
         System.out.println(planeta1.cuantosOrbitan());
-
     }
 }
