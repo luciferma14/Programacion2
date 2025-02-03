@@ -38,5 +38,4 @@ public class Satelite {
     public void setDistanAlPlaneta(Double distanAlPlaneta) {
         this.distanAlPlaneta = distanAlPlaneta;
     }
-
 }
