@@ -2,22 +2,23 @@ public class Satelite {
     
     private String nombre;
     private Planeta planeta;
-    private Double distanAlPlaneta;
+    private Long distanAlPlaneta;
 
     public Satelite(){}
 
-    public Satelite(String nombre, Planeta planeta, Double distanAlPlaneta){
+    public Satelite(String nombre, Planeta planeta, Long distanAlPlaneta){
         this.nombre = nombre;
         this.planeta = planeta;
         this.distanAlPlaneta = distanAlPlaneta;
+        this.planeta.setnSatelites(planeta.getnSatelites() + 1);
     }
 
     public Boolean orbita(String nombre){
         if (nombre.equals(this.planeta.getNombre())){
             return true;   
-        }else{
-            return false;
         }
+
+       return false;
     }
 
     public String getNombre() {
@@ -32,10 +33,10 @@ public class Satelite {
     public void setPlaneta(Planeta planeta) {
         this.planeta = planeta;
     }
-    public Double getDistanAlPlaneta() {
+    public Long getDistanAlPlaneta() {
         return this.distanAlPlaneta;
     }
-    public void setDistanAlPlaneta(Double distanAlPlaneta) {
+    public void setDistanAlPlaneta(Long distanAlPlaneta) {
         this.distanAlPlaneta = distanAlPlaneta;
     }
 }

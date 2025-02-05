@@ -1,28 +1,23 @@
-public class Planeta extends Satelite{
+public class Planeta {
     
     private String nombre;
-    private Double masa;
+    private Long masa;
     private Double diametro;
+    private Integer nSatelites;
 
     public Planeta(){}
 
-    public Planeta(String nombre, Double masa, Double diametro){
+    public Planeta(String nombre){
+        this.nombre = nombre;
+        this.nSatelites = 0;
+    }
+
+    public Planeta(String nombre, Long masa, Double diametro){
         this.nombre = nombre;
         this.masa = masa;
         this.diametro = diametro;
+        this.nSatelites = 0;
     }
-
-
-    public Integer cuantosOrbitan(){
-        int cont = 0;
-
-        //if(getPlaneta() == this.nombre){
-        //    cont++;
-        //}
-
-        return cont;
-    }
-
 
     public String getNombre() {
         return this.nombre;
@@ -30,10 +25,10 @@ public class Planeta extends Satelite{
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public Double getMasa() {
+    public Long getMasa() {
         return this.masa;
     }
-    public void setMasa(Double masa) {
+    public void setMasa(Long masa) {
         this.masa = masa;
     }
     public Double getDiametro() {
@@ -42,7 +37,10 @@ public class Planeta extends Satelite{
     public void setDiametro(Double diametro) {
         this.diametro = diametro;
     }
-
-    
-
+    public Integer getnSatelites() {
+        return this.nSatelites;
+    }
+    public void setnSatelites(int nSatelites) {
+        this.nSatelites = nSatelites;
+    }
 }
