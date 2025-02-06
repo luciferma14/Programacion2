@@ -16,6 +16,5 @@ public class PruebaPlanetas {
 
         System.out.println(planeta1.getnSatelites());
         System.out.println(planeta2.getnSatelites());
-        
     }
 }
