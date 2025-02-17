@@ -1,4 +1,5 @@
 public class Pokemon implements Comparable<Pokemon>{
+    // lo comentado es lo que hice yo :(
     
     private Integer numero;
     private String nombre;
@@ -39,12 +40,20 @@ public class Pokemon implements Comparable<Pokemon>{
     }
 
     public int compareTo(Pokemon p){
+        //if(this.experiencia != p.experiencia){
+            //return (p.experiencia - this.experiencia);
+        //}
+        //return (p.experiencia + this.experiencia);  
 
-        if(this.experiencia != p.experiencia){
-            return (p.experiencia - this.experiencia);
+        if(this.experiencia > p.experiencia){
+            return -1;
         }
+        if(this.experiencia < p.experiencia){
+            return 1;
+        }
+        return 0;
 
-        return (p.experiencia + this.experiencia);  
+        // lo mismo que lo de arriba --> return p.experiencia - this.experiencia;
     }
 
     public String toString(){
