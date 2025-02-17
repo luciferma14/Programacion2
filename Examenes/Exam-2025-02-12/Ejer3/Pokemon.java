@@ -20,23 +20,28 @@ public class Pokemon implements Comparable<Pokemon>{
     }
 
     public void ataquePokemon(Pokemon p){
-        int puntos;
-        int vid;
+        int puntos = 1;
+        //int vid;
 
         if(this.experiencia > p.experiencia){
             puntos = (int)(Math.random() * 3) +1;
-            vid = p.vida - puntos;
-
-            if(vid < 0){
-                p.vida = 0;
-            }
+            //vid = p.vida - puntos;
+            //if(vid < 0){
+            //    p.vida = 0;
+            //}
+        }//else{
+            //vid = p.vida - 1;
+            // if(vid < 0){
+            //     p.vida = 0;
+            // }
+         // }
+        if(p.getVida() - puntos >= 0){
+            p.setVida(p.getVida() - puntos);
         }else{
-            vid = p.vida - 1;
-
-            if(vid < 0){
-                p.vida = 0;
-            }
+            p.setVida(0);
         }
+        // lo mismo que lo de arriba -->   p.setVida(Math.max(p.getVida() - puntos, 0));
+        // max = de dos valores el más mayor
     }
 
     public int compareTo(Pokemon p){

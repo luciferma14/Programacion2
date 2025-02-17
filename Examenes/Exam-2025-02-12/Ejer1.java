@@ -16,7 +16,7 @@ public class Ejer1 {
         for (int i = 0; i < casos; i++) {
             palab = sc.nextLine();
             
-            ultima = palab.substring(palab.length()-1);
+            ultima = palab.substring(palab.length()-1); // o con el charAt() y en el if poner: ultima == 'a' ...
 
             if(ultima.equals("a") || ultima.equals("e") || ultima.equals("i") ||
                  ultima.equals("o") || ultima.equals("u") || ultima.equals("n") || ultima.equals("s")){
