@@ -2,12 +2,17 @@ public class Tren {
 
     private String nombreTren;
     private Integer capacidadAsi;
+    private String[] asientos;
 
-    public Tren(){}
+    public Tren(){
+        this.nombreTren = "Virtual";
+        this.capacidadAsi = 1;
+    }
 
     public Tren(String nombreTren, Integer capacidadAsi){
         this.nombreTren = nombreTren;
         this.capacidadAsi = capacidadAsi;
+        this.asientos = new String[capacidadAsi];
     }
 
 
@@ -27,5 +32,13 @@ public class Tren {
 
     public void setCapacidadAsi(Integer capacidadAsi) {
         this.capacidadAsi = capacidadAsi;
+    }
+
+    public String[] getAsientos() {
+        return this.asientos;
+    }
+
+    public void setAsientos(String[] asientos) {
+        this.asientos = asientos;
     }
 }

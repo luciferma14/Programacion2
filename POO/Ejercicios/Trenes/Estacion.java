@@ -1,6 +1,6 @@
 public class Estacion {
     
-    private static String nombreEst;
+    private String nombreEst;
     private Double precioBill;
 
     public Estacion(){}
@@ -11,15 +11,17 @@ public class Estacion {
     }
 
     public double precioBillete(Integer edad) {
-        //terminar
-        double precio = 0;
-        return precio;
+
+        if(edad < 16){
+            return precioBill / 2;
+        }
+        return precioBill;
     }
 
 //-------- Getters y Setters ---------
 
-    public static String getNombreEst() {
-        return nombreEst;
+    public String getNombreEst() {
+        return this.nombreEst;
     }
 
     public void setNombreEst(String nombreEst) {
@@ -27,6 +29,13 @@ public class Estacion {
     }
 
     public Double getPrecioBill() {
+        return this.precioBill;
+    }
+
+    public Double getPrecioBill(Integer edad) {
+        if(edad < 16){
+            return precioBill / 2;
+        }
         return precioBill;
     }
 

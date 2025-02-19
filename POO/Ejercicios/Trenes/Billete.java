@@ -18,9 +18,9 @@ public class Billete {
         this.precioBill = precioBill;
     }
 
-        public String imprimeBillete() {
-        //terminar
-        return "";     
+    public String imprimeBillete() {
+
+        return this.dniPas + ", " + this.estacionDest + ", " + this.fechaBill + ", " + this.nombreTren + ", " + this.numAsiento + ", " + this.precioBill;     
     }
 
 
