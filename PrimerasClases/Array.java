@@ -12,9 +12,5 @@ public class Array {
         System.out.println(Arrays.equals(vec1, vec2)); // false
         Arrays.sort(vec1); // Ordena el array de menor a mayor
         System.out.println(Arrays.equals(vec1, vec2)); // true
-
-
-
-
     }
 }
