@@ -29,8 +29,7 @@ public class Carcel {
     }
 
     public ArrayList<Forajido> getPresidiarios() {
-        return presidiarios;
-       
+        return presidiarios;       
     }
 
     public void setPresidiarios(Forajido f) {
