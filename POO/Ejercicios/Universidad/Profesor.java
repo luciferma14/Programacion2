@@ -21,11 +21,6 @@ public class Profesor extends Persona {
     }
     
     public String toString(){
-
-        if(this.direccion.equals(null)){
-            return this.nombre + " " + this.apellidos + ", " + this.nif + ", Despacho: " + this.nDespacho;
-        }else{
-            return this.nombre + " " + this.apellidos + ", " + this.nif + ", " + this.direccion + ", Despacho: " + this.nDespacho;
-        }
+        return super.toString()+ "," + " Num Despacho: " + nDespacho;
     }
 }

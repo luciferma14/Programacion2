@@ -21,11 +21,6 @@ public class Estudiante extends Persona {
     }
     
     public String toString(){
-
-        if(this.direccion.equals(null)){
-            return this.nombre + " " + this.apellidos + ", " + this.nif + ", ID: " + this.idEstudiante;
-        }else{
-            return this.nombre + " " + this.apellidos + ", " + this.nif + ", " + this.direccion + ", ID: " + this.idEstudiante;
-        }
+        return super.toString() + "," + " ID Estudiante: " + idEstudiante;
     }
 }
