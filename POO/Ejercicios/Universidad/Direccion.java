@@ -12,6 +12,11 @@ public class Direccion{
         this.pais = pais;
     }
 
+    @Override
+    public String toString() {
+        return "Direccion: " + calle + ", " + ciudad + ", " + codPostal + ", " + pais;
+    }
+
     public String getCalle() {
         return this.calle;
     }

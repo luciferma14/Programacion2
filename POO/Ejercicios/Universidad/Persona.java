@@ -18,6 +18,11 @@ public class Persona {
         this.nif = nif;
     }
 
+    @Override
+    public String toString() {
+        return nombre + " " + apellidos + ", " + "NIF: " + nif + " - " + direccion;
+    }
+
     public String getNombre() {
         return this.nombre;
     }
