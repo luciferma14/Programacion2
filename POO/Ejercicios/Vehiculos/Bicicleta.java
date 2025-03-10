@@ -1,6 +1,6 @@
 public class Bicicleta extends Vehiculo{
     
-    private static Integer kilometrosRecorridos;
+    private Integer kilometrosRecorridos;
     
     public Bicicleta(){
         this.kilometrosRecorridos = 0;
