@@ -1,4 +1,4 @@
-public class Persona {
+public class Person {
     
     private String nombre;
     private Integer edad;
@@ -7,12 +7,12 @@ public class Persona {
     private Double peso;
     private Double altura;
 
-    public Persona(){
+    public Person(){
         this.sexo = 'M';
         this.dni = generaDNI();
     }
 
-    public Persona(String nombre, Integer edad, Character sexo){
+    public Person(String nombre, Integer edad, Character sexo){
         this.nombre = nombre;
         this.edad = edad;
         this.dni = generaDNI();
@@ -20,7 +20,7 @@ public class Persona {
         comprobarSexo(this.sexo);
     }
 
-    public Persona(String nombre, Integer edad, Character sexo, Double peso, Double altura){
+    public Person(String nombre, Integer edad, Character sexo, Double peso, Double altura){
         this.nombre = nombre;
         this.edad = edad;
         this.dni = generaDNI();

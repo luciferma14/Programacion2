@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PruebaPersona {
+public class PruebaPerson {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
@@ -25,7 +25,7 @@ public class PruebaPersona {
         System.out.print("Altura: ");
         altura1 = sc.nextDouble();
 
-        Persona per1 = new Persona(nombre1, edad1, sexo1, peso1, altura1);
+        Person per1 = new Person(nombre1, edad1, sexo1, peso1, altura1);
 
         sc.nextLine();
         System.out.println();
@@ -37,9 +37,9 @@ public class PruebaPersona {
         System.out.print("Sexo (H-M): ");
         sexo2 = sc.next().charAt(0);
 
-        Persona per2 = new Persona(nombre2, edad2, sexo2);
+        Person per2 = new Person(nombre2, edad2, sexo2);
 
-        Persona per3 = new Persona();
+        Person per3 = new Person();
         per3.setNombre("Álvaro");
         per3.setEdad(13);
         per3.generaDNI();
