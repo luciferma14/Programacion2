@@ -4,7 +4,7 @@ public class PruebaCartas {
     public static void main(String[] args) {
 
         Carta c = new Carta(1, "Espadas");
-        Baraja b = new Baraja(12);
+        Baraja b = new Baraja(3);
         
         b.barajar();
 
@@ -16,16 +16,16 @@ public class PruebaCartas {
             j2.add(b.repartirCarta());
         }
 
-        System.out.println("-------J1--------");
+        System.out.println("-----J1------");
         for (Carta c1 : j1) {
             System.out.println(c1);
         }
 
-        System.out.println("-------J2--------");
+        System.out.println("-----J2------");
         for (Carta c2 : j2) {
             System.out.println(c2);
         }
-        System.out.println("-----------------");
+        System.out.println("-------------");
 
         for (Carta car : b.getCartas()) {
             System.out.println(car);    
