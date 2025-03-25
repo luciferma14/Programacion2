@@ -3,15 +3,19 @@ public class Carta {
     private Integer valor;
     private String palo;
 
-    public Carta(Integer valor, String palo){
+    // Constructor con valor y palo
+    public Carta(Integer valor, String palo) {
         this.valor = valor;
         this.palo = palo;
     }
 
-    public String toString(){
-        return this.valor + " : " + this.palo;
+    // Método toString para mostrar la carta de manera legible
+    @Override
+    public String toString() {
+        return this.valor + " de " + this.palo;
     }
 
+    // Getters y Setters
     public Integer getValor() {
         return this.valor;
     }
@@ -27,6 +31,4 @@ public class Carta {
     public void setPalo(String palo) {
         this.palo = palo;
     }
-
-    
 }
