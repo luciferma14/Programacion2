@@ -12,12 +12,11 @@ public class Jugador {
     
     public Carta juegaCarta() {
         if (mano.isEmpty()) {
-            return null; // Si la mano está vacía, no se puede jugar ninguna carta
+            return null;
         } else {
-            // Si la mano no está vacía, eliminamos y devolvemos la primera carta
-            Carta carta = mano.get(0); // Tomamos la primera carta
-            mano.remove(0); // La eliminamos de la mano
-            return carta; // La devolvemos
+            Carta carta = mano.get(0); 
+            mano.remove(0); 
+            return carta; 
         }
     }
     

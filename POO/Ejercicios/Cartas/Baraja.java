@@ -7,7 +7,6 @@ public class Baraja {
     private ArrayList<Carta> cartas = new ArrayList<>();
 
     public Baraja() {
-        // Crear cartas con los 4 palos y valores de 1 a 12
         for (int i = 1; i <= 12; i++) {
             cartas.add(new Carta(i, "Espadas"));
             cartas.add(new Carta(i, "Oros"));
@@ -37,7 +36,6 @@ public class Baraja {
             manos.add(new ArrayList<>());
         }
 
-        // Reparte las cartas aleatoriamente entre los jugadores
         for (int i = 0; i < cartas.size(); i++) {
             manos.get(i % numJugadores).add(cartas.get(i));
         }
