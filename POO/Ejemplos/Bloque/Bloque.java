@@ -21,7 +21,6 @@ public abstract class Bloque {
 
     public abstract void colocar(); // Todas las supclases tienen que tener "colocar()" (obligado)
 
-
     public Integer getAlto() {
         return this.alto;
     }
