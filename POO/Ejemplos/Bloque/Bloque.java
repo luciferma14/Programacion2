@@ -19,7 +19,7 @@ public abstract class Bloque {
         this.color = color;
     }
 
-    public abstract void colocar(); // Todas las supclases tienen que tener "colocar()" (obligado)
+    public abstract void colocar(); // Todas las subclases tienen que tener "colocar()" (obligado)
 
     public Integer getAlto() {
         return this.alto;
