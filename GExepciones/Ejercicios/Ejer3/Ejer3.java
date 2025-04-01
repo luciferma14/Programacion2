@@ -54,7 +54,6 @@ public class Ejer3 {
     public static Integer LeeIntRango(Integer min, Integer max){
         Integer n = null;
       
-
         try {
             
             n = sc.nextInt();
@@ -76,4 +75,44 @@ public class Ejer3 {
             throw new ExcepcionPos(n + " se sale del rango");
         }
     }
+
+    // d)
+    public static Double LeeDou(){
+
+        Double n = null;
+
+        try {
+            
+            n = sc.nextDouble();
+            
+        } catch (Exception e) {
+            System.out.println("Valor no Double");
+        }
+
+        return n;
+    }
+
+    // e)
+    public static Double LeeDouRango(Double min, Double max){
+        Double n = null;
+
+        try {
+            
+            n = sc.nextDouble();
+            
+            error2(n, min, max);
+            
+        } catch (Exception e){
+            System.out.println("Error indefinido");
+        }
+
+        return n;
+    }
+
+    private static void error2(Double n, Double min, Double max) throws Exception {
+        if (n < min || n > max){
+            throw new Exception(n + " se sale del rango");
+        }
+    }
+
 }

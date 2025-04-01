@@ -7,32 +7,26 @@ public class Ejer4 {
     public static final String[] COMPOSITORES = {"Bach", "Haydn", "Mozart", "Beethoven", "Brahms", "Mahler", "Bartok"};
 
     public static String LeerCompositores(){
-        String c = null;
+        int esta = -1;
       
-        try {
-            
-            c = sc.nextLine();
-            
-            error(c);
-            
-        } catch (ElementoNoExistente e) {
-            System.out.println(e.toString());
-
-        } catch (Exception e){
-            System.out.println("Error indefinido");
-        }
-
-        return c;
-    }
-
-    private static void error(String c) throws ElementoNoExistente {
-
-        for(int i = 0; i < COMPOSITORES.length; i++){
-            if (!COMPOSITORES[i].equals(c)){
-                throw new ElementoNoExistente(c + " no está en la lista de compositores");
-            }
-        }
+        try{
+            System.out.print("Nombre de un compositor: ");
+            String palabra = sc.next();
         
+            for (int i = 0; i < COMPOSITORES.length; i++) {
+                if (COMPOSITORES[i].equals(palabra)) {
+                    esta = i;
+                }
+            }
+            if (esta == -1) {
+                throw new ElementoNoExistente("El compositor no está en la lista");
+            } else {
+                return "Está en la posición " + esta;
+            }
+        }catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+        return "";
     }
-    
 }
