@@ -5,9 +5,9 @@ public class Heroe extends Personajes{
         super(nombre, puntosDeVida, arma);
     }
     
-    public Heroe(){
-        setNombre("Mago");
-        setPuntosDeVidaMago(0);
-        setArma("Hechizo");
-    }
+    // public Heroe(){
+    //     setNombre("Mago");
+    //     setPuntosDeVidaMago(0);
+    //     setArma("Hechizo");
+    // }
 }
