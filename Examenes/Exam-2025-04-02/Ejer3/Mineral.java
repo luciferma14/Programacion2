@@ -12,7 +12,7 @@ public class Mineral extends Objeto {
     }
 
     @Override
-    public String elegirNombre(){
+    public String eligeNombre(){
 
         nombres.add("hierro");
         nombres.add("carbon");
@@ -27,7 +27,7 @@ public class Mineral extends Objeto {
     }
 
     @Override
-    public Integer elegirValor(){
+    public Integer eligeValor(){
 
         Integer val = random.nextInt(2) + 1;
         

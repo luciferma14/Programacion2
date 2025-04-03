@@ -13,7 +13,7 @@ public class Comida extends Objeto {
 
 
     @Override
-    public String elegirNombre(){
+    public String eligeNombre(){
 
         nombres.add("pan");
         nombres.add("manzana");
@@ -28,7 +28,7 @@ public class Comida extends Objeto {
     }
 
     @Override
-    public Integer elegirValor(){
+    public Integer eligeValor(){
 
         Integer val = random.nextInt(3) + 1;
         

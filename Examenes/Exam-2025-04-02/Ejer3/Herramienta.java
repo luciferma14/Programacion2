@@ -12,7 +12,7 @@ public class Herramienta extends Objeto {
     }
 
     @Override
-    public String elegirNombre(){
+    public String eligeNombre(){
 
         this.nombres.add("espada");
         this.nombres.add("pico");
@@ -27,11 +27,13 @@ public class Herramienta extends Objeto {
         return aux;
     }
 
-    @Override
-    public Integer elegirValor(){
+   @Override
+    public Integer eligeValor(){
 
         Integer val = random.nextInt(10) +1;
         
         return val;
     }
+
+   
 }

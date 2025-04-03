@@ -11,7 +11,7 @@ public class Armadura extends Objeto {
     }
 
     @Override
-    public String elegirNombre(){
+    public String eligeNombre(){
 
         nombres.add("casco");
         nombres.add("pechera");
@@ -26,7 +26,7 @@ public class Armadura extends Objeto {
     }
 
     @Override
-    public Integer elegirValor(){
+    public Integer eligeValor(){
 
         Integer val = random.nextInt(10) +1;
         

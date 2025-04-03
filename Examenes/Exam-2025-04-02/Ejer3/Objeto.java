@@ -4,12 +4,12 @@ public abstract class Objeto {
     private Integer valor;
 
     public Objeto(){
-        this.nombre = elegirNombre();
-        this.valor = elegirValor();
+        this.nombre = eligeNombre();
+        this.valor = eligeValor();
     }
 
-    public abstract String elegirNombre();
-    public abstract Integer elegirValor();
+    public abstract String eligeNombre();
+    public abstract Integer eligeValor();
 
     public void usar(){
         this.valor = valor - 1;
