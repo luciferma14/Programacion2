@@ -1,0 +1,4 @@
+Hola, me llamo Lucía, esto es un fichero de prueba para comprobar ejercicios.
+Tengo 20 años.
+Hola otra vez
+Adios
