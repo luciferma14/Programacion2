@@ -47,7 +47,5 @@ public class MeterLineaMedio {
                 System.out.println(e.getMessage());
             }
         }
-        
-
     }
 }
