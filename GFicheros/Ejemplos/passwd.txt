@@ -1,0 +1,2 @@
+lucia:hola
+alvaro:adios
