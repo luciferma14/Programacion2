@@ -1,0 +1,30 @@
+{
+    "java.project.sourcePaths": [
+        "AccesoBBDD",
+        "AER",
+        "ED",
+        "ED/EjerColecciones",
+        "ED/HashMap",
+        "ED/Set",
+        "EjemExamen",
+        "EjerAlgoritmos",
+        "EjerAmpliados",
+        "EjerAvanzados",
+        "EjerBasicos",
+        "Examenes/Exam-2025-01-22",
+        "GExepciones/Ejercicios",
+        "GExepciones/Ejercicios/Ejer3",
+        "GExepciones/Ejercicios/Ejer4",
+        "GExepciones/Ejercicios/Ejer5",
+        "GFicheros/Ejemplos",
+        "PE/peExtra",
+        "PM",
+        "POO/EjemAvanzado",
+        "PrimerasClases",
+        "Programame/Ejemplos",
+        "Recursividad"
+    ],
+    "java.project.referencedLibraries": [
+        "AccesoBBDD/lib/mysql-connector-j-9.2.0.jar"
+    ]
+}
