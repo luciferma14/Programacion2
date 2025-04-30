@@ -1,1 +1,2 @@
-select * from contacto;
+USE login;
+select * from usuarios;
