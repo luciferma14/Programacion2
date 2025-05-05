@@ -7,7 +7,7 @@ USE login;
 DROP TABLE IF EXISTS usuarios;
 
 CREATE TABLE usuarios(
-	idUsu int PRIMARY KEY NOT NULL,
+	idUsu int PRIMARY KEY AUTO_INCREMENT,
     nomUsu VARCHAR (100) NOT NULL,
     passwd VARCHAR (100) NOT NULL
 );
