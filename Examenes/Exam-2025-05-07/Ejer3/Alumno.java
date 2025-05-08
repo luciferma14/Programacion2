@@ -48,9 +48,6 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return getNumAlumno() + " - " + getNombre();
-    }
-
-    
-    
+        return numAlumno + " - " + nombre;
+    }  
 }

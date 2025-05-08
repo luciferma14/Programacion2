@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 // Clase Estudiante
-class Estudiante {
+class Estudiante1 {
     private String nombre;
 
-    public Estudiante(String nombre) {
+    public Estudiante1(String nombre) {
         this.nombre = nombre;
     }
 

@@ -28,8 +28,6 @@ public class Sesion {
 
     @Override
     public String toString() {
-        return getIdSesion() + " - " + getModulo();
+        return idSesion + " - " + modulo;
     }
-
-    
 }
