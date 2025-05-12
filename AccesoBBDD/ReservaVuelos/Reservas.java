@@ -30,7 +30,7 @@ public class Reservas {
             System.out.println("Error imprevisto");
         }
     }
-
+ 
     public static void main(String[] args) {
         
         int n = 0;
