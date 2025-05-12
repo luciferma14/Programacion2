@@ -23,6 +23,14 @@ public class Reservas {
         return sc.nextInt();
     }
 
+    public static void error(int valor){
+        if (valor == 1){
+            System.out.println("Opción incorrecta");
+        }else{
+            System.out.println("Error imprevisto");
+        }
+    }
+
     public static void main(String[] args) {
         
         int n = 0;
