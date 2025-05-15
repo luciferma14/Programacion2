@@ -57,5 +57,12 @@ public class Vuelos {
         this.capacidad = capacidad;
     }
 
-    
+    @Override
+    public String toString() {
+        if (id_Vuelo == null){
+            return "Capacidad: " + capacidad;
+        }
+        return "Vuelo: " + id_Vuelo;
+    }
+
 }

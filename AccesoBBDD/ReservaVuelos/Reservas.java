@@ -7,6 +7,7 @@ import java.util.*;
 public class Reservas {
     
     static private ArrayList<Vuelos> vuelos = new ArrayList<>();
+    static private ArrayList<Vuelos> vuelosCap = new ArrayList<>();
     static private ArrayList<Pasajeros> pasajeros = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
 
@@ -34,21 +35,6 @@ public class Reservas {
             try {
                 //Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ReservaVuelos", "senia", "seniadb");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ReservaVuelos", "root", "rootroot");
-
-                Statement st = con.createStatement();
-                ResultSet rs = st.executeQuery("SELECT * FROM Vuelos");
-
-                while(rs.next()){
-                    Vuelos v = new Vuelos();
-                    v.setId_Vuelo(rs.getString("Id_Vuelo"));
-                    v.setOrigen(rs.getString("origen"));
-                    v.setDestino(rs.getString("destino"));
-                    v.setFecha(rs.getString("fecha"));
-                    v.setCapacidad(rs.getInt("capacidad"));
-
-                    vuelos.add(v);
-                }
-                
 
                 switch (n) {
                     case 1: // Alta vuelo
@@ -129,6 +115,115 @@ public class Reservas {
 
                     break;
 
+                    case 3: // Reserva vuelo
+
+                        Statement st3 = con.createStatement();
+                        ResultSet rs3 = st3.executeQuery("SELECT Id_Pasajero FROM Pasajeros");
+
+                        while(rs3.next()){
+                            Pasajeros p = new Pasajeros();
+                            p.setId_Pasajero(rs3.getInt("Id_Pasajero"));
+
+                            pasajeros.add(p);
+                        }
+                        System.out.println();
+                        for (Pasajeros pasa : pasajeros) {
+                            System.out.println(pasa);
+                        }
+                        
+
+                        sc.nextLine();
+                        System.out.print("Con pasajero quieres reservar: ");
+                        Integer  idPasajero3 = sc.nextInt();
+                        sc.nextLine();
+
+                        PreparedStatement pst311 = con.prepareStatement("SELECT * FROM Pasajeros WHERE Id_Pasajero = ?");
+                        pst311.setInt(1, idPasajero3);
+
+                        ResultSet rs311 = pst311.executeQuery();
+
+                        boolean encontrado3 = true;
+
+                        if(!rs311.next()){
+                            encontrado3 = false;
+                            System.out.println("Ese pasajero no existe");
+                            pasajeros.clear();
+                        }
+                        rs311.close();
+
+                        if(encontrado3){
+                            Statement st32 = con.createStatement();
+                            ResultSet rs32 = st32.executeQuery("SELECT Id_Vuelo FROM Vuelos");
+    
+                            while(rs32.next()){
+                                Vuelos v = new Vuelos();
+                                v.setId_Vuelo(rs32.getString("Id_Vuelo"));
+
+                                vuelos.add(v);
+                            }
+
+                            System.out.println();
+                            for (Vuelos vuel : vuelos) {
+                                System.out.println(vuel);
+                            }
+
+                            System.out.print("Que vuelo quieres reservar: ");
+                            String  idVuelo3 = sc.nextLine();
+
+                            PreparedStatement pst321 = con.prepareStatement("SELECT * FROM Vuelos WHERE Id_Vuelo = ?");
+                            pst321.setString(1, idVuelo3);
+                            
+                            ResultSet rs321 = pst321.executeQuery();
+        
+                            boolean encontrado32 = true;
+    
+                            if(!rs321.next()){
+                                encontrado32 = false;
+                                System.out.println("Ese vuelo no existe");
+                                pasajeros.clear();
+                                vuelos.clear();
+                            }
+
+                            rs321.close();
+
+                            PreparedStatement pst322 = con.prepareStatement("SELECT capacidad FROM Vuelos WHERE Id_Vuelo = ?");
+                            pst322.setString(1, idVuelo3);
+
+                            ResultSet rs322 = pst322.executeQuery();
+    
+                            while(rs322.next()){
+                                Vuelos v1 = new Vuelos();
+            
+                                v1.setCapacidad(rs322.getInt("capacidad"));
+    
+                                vuelosCap.add(v1);
+                            }
+
+                            System.out.println();
+                            for (Vuelos vuelCap : vuelosCap) {
+                                System.out.println(vuelCap);
+                            }
+
+                            System.out.print("Elige el asiento: ");
+                            Integer numAsiento = sc.nextInt();
+
+                            // pst321 = con.prepareStatement("INSERT INTO VueloPasajero (Id_Pasajero, Id_Vuelo, Num_Asiento) VALUES (?, ?, ?)");
+                            // pst321.setInt(1, idPasajero3);
+                            // pst321.setString(2, idVuelo3);
+                            // pst321.setInt(3, numAsiento);
+
+                            // int res = pst321.executeUpdate();
+                            // if (res > 0){
+                            //     System.out.println("Reserva añadida");
+                            // }
+                        }
+
+                    break;
+
+                    case 5:
+                        // Borrar reserva
+                    
+                    break;
 
                     case 6:
                         System.out.println("Saliendo... :(");
@@ -140,7 +235,10 @@ public class Reservas {
             }catch (SQLException e) {
                 System.out.println("Error en la conexión");
                 e.printStackTrace();
-            } 
+            }catch (InputMismatchException e){
+                System.out.println("Tipo de dato introducido incorrecto");
+                e.getMessage();
+            }
 
         } while (n != 6);
     }

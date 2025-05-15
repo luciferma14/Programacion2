@@ -37,5 +37,11 @@ public class Pasajeros {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    @Override
+    public String toString() {
+        return "Pasajero: " + id_Pasajero;
+    }
+    
     
 }
